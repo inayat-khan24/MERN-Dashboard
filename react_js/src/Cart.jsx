@@ -5,6 +5,7 @@ import axios from 'axios';
 
 const Cart = ({image,reviews,rating,originalPrice,price,title,id}) => {
     const  {handleClick,EditSlid,getId,setGetId} = useContext(CreateStore)
+     
 
     const DeleteProduct = async(id)=>{
       const isConfirmed = window.confirm(" do you really want to delete this Product");
@@ -21,6 +22,7 @@ const Cart = ({image,reviews,rating,originalPrice,price,title,id}) => {
 
 
     }
+    
     }
 
 
@@ -32,13 +34,15 @@ const Cart = ({image,reviews,rating,originalPrice,price,title,id}) => {
           src={image}
           alt="HAVIT HV-G92 Gamepad"
         />
-        <h1 className="text-lg font-semibold text-gray-800 mb-2">{title.slice(0,10)}</h1>
+        <h1 className="text-lg font-semibold text-gray-800 mb-2">{title.slice(0,15)}...</h1>
 
         <div className="flex items-center gap-2">
           <h2 className="text-red-500 font-bold text-lg">{`$${price}`}</h2>
           <h2 className="text-gray-500 line-through">{`$${originalPrice}`}</h2>
         </div>
-       <Rating/>
+       <Rating
+       rating = {rating}
+       />
 
        <div className='flex items-center justify-between'>
 <button 

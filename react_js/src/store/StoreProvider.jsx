@@ -3,7 +3,7 @@ import { CreateStore } from './createStore'
 
 
 const StoreProvider = ({children}) => {
-const [refreshList, setRefreshList] = useState(false);
+
     const handleClick = (rating) => {
     setSelectedStar(rating);
     console.log('User selected rating:', rating);
@@ -39,7 +39,7 @@ const [hoveredStar, setHoveredStar] = useState(0);
         reviews,
       }
       )
-    
+   
       
     }
 
@@ -57,7 +57,7 @@ const [hoveredStar, setHoveredStar] = useState(0);
         selectedStar, setSelectedStar,
         EditSlid,setGetId,getId,
         productList, setProductList,
-        refreshList, setRefreshList
+        
         // rating,
         // reviews,
         }}>

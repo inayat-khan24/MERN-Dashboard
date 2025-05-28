@@ -65,6 +65,7 @@ try {
     }
 } catch (error) {
     console.log(error)
+    
 }
 
 // clear input field after upload successful

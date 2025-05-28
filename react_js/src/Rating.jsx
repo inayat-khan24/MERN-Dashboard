@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { CreateStore } from './store/createStore';
 
-const Rating = () => {
+const Rating = ({rating}) => {
 // const product = {
 //     rating: 3.4,
 //     reviews: 30
@@ -9,8 +9,7 @@ const Rating = () => {
 
 //   
 
-  const {rating,
-        reviews,} = useContext(CreateStore)
+
 
 
 
@@ -18,10 +17,10 @@ const Rating = () => {
     <div>
       
    {/* Product static rating display */}
-        {/* <div className="flex items-center text-yellow-500 text-sm mt-2">
+        <div className="flex items-center text-yellow-500 text-sm mt-2">
           {"★".repeat(Math.floor(rating))}
-          <span className="text-gray-500 ml-1">({product.reviews})</span>
-        </div> */}
+          {/* <span className="text-gray-500 ml-1">({reviews})</span> */}
+        </div>
 
         {/* Clickable Rating Component */}
         {/* <div className="flex mt-2">
