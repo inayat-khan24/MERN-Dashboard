@@ -1,9 +1,14 @@
 import mongoose from "mongoose"
+import dotenv from "dotenv"
+dotenv.config()
 
 try {
-    await mongoose.connect(`mongodb://localhost:27017/produstList`)
+    const url = process.env.MONGODB_URL
+    await mongoose.connect(url)
     mongoose.set({"debug":true})
+    console.log("conected successful")
 } catch (error) {
+     console.log("not  conected ")
     console.log(error)
 }
 

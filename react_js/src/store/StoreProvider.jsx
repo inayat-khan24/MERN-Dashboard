@@ -45,7 +45,17 @@ const [hoveredStar, setHoveredStar] = useState(0);
 
 
      
-
+// fetch data 
+const productFetch = async()=>{
+try {
+    const res = await axios.get("http://localhost:5000/product")
+    setIsLoading(false)
+    setProductItems(res.data)
+    
+} catch (error) {
+ console.log(error)   
+}
+}
 
     
     
@@ -57,6 +67,7 @@ const [hoveredStar, setHoveredStar] = useState(0);
         selectedStar, setSelectedStar,
         EditSlid,setGetId,getId,
         productList, setProductList,
+        productFetch 
         
         // rating,
         // reviews,

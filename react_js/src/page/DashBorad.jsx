@@ -54,6 +54,7 @@ try {
  console.log(error)   
 }
 }
+console.log(productItems)
 
 // add product
 
