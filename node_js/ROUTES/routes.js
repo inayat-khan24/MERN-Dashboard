@@ -5,6 +5,7 @@ const router = express.Router();
 router.post("/product", createPrduct);  // ✅ actual route is POST /product
 
 router.get("/product",findData);
+router.get("/home",findData);
 
 // update data 
 router.put("/product/:id",updateproduct);
