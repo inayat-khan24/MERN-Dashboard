@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 app.use("/", router); // ✅ All product routes prefixed with /product
 app.get("/",(req,res)=>{
-  res.send("hello")
+  res.send("hello1")
 })
 
 const PORT = process.env.PORT
